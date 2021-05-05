@@ -37,9 +37,10 @@
 
 </head>
 
-<body style="background-color: rgb(29, 29, 29); color: white; font-family: 'Amaranth', sans-serif;">
-
+<body  onload="myFunction()" style="background-color: rgb(29, 29, 29); color: white; font-family: 'Amaranth', sans-serif;">
+    <div id="loader" style="margin-left: 45%; font-size: x-large;margin-top: 28%; font-family: Raleway;"> LOADING...</div>
     <!-- Navbar-->
+    <div style="display:none;" id="myDiv" class="animate-bottom">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top justify-content-lg-between"
         style="font-size: large;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -194,7 +195,19 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+</div>
+    <script>
+        var myVar;
 
+        function myFunction() {
+            myVar = setTimeout(showPage, 5000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
 </body>
 <footer>
     <br><br>
